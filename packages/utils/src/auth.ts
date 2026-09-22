@@ -216,6 +216,10 @@ const errorCodeMessages: {
     title: `GitLab not configured`,
     message: () => `GitLab not configured. Please contact your administrator.`,
   },
+  [EAuthErrorCodes.OIDC_NOT_CONFIGURED]: {
+    title: `OIDC not configured`,
+    message: () => `OIDC not configured. Please contact your administrator.`,
+  },
   [EAuthErrorCodes.GOOGLE_OAUTH_PROVIDER_ERROR]: {
     title: `Google OAuth provider error`,
     message: () => `Google OAuth provider error. Please try again.`,
@@ -227,6 +231,10 @@ const errorCodeMessages: {
   [EAuthErrorCodes.GITLAB_OAUTH_PROVIDER_ERROR]: {
     title: `GitLab OAuth provider error`,
     message: () => `GitLab OAuth provider error. Please try again.`,
+  },
+  [EAuthErrorCodes.OIDC_OAUTH_PROVIDER_ERROR]: {
+    title: `OIDC provider error`,
+    message: () => `OIDC provider error. Please try again.`,
   },
   // Reset Password
   [EAuthErrorCodes.INVALID_PASSWORD_TOKEN]: {
@@ -337,9 +345,11 @@ export const authErrorHandler = (errorCode: EAuthErrorCodes, email?: string): TA
     EAuthErrorCodes.GOOGLE_NOT_CONFIGURED,
     EAuthErrorCodes.GITHUB_NOT_CONFIGURED,
     EAuthErrorCodes.GITLAB_NOT_CONFIGURED,
+    EAuthErrorCodes.OIDC_NOT_CONFIGURED,
     EAuthErrorCodes.GOOGLE_OAUTH_PROVIDER_ERROR,
     EAuthErrorCodes.GITHUB_OAUTH_PROVIDER_ERROR,
     EAuthErrorCodes.GITLAB_OAUTH_PROVIDER_ERROR,
+    EAuthErrorCodes.OIDC_OAUTH_PROVIDER_ERROR,
     EAuthErrorCodes.INVALID_PASSWORD_TOKEN,
     EAuthErrorCodes.EXPIRED_PASSWORD_TOKEN,
     EAuthErrorCodes.INCORRECT_OLD_PASSWORD,
